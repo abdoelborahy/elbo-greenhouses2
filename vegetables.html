@@ -1,58 +1,42 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>قسم الخضروات | Elbo Greenhouses</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-green-50 text-gray-800">
-  <header class="bg-green-700 text-white p-4 text-center text-2xl font-bold">
-    🥬 قسم الخضروات | Elbo Greenhouses
+  <header class="bg-green-700 text-white text-center p-6 text-3xl font-bold">
+    🥦 قسم الخضروات - Elbo Greenhouses
   </header>
 
-  <main class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-    <script>
-      const vegetables = [
-        { name: "الطماطم", emoji: "🍅", link: "tomato.html", img: "https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg" },
-        { name: "الخيار", emoji: "🥒", link: "cucumber.html", img: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Cucumis_sativus-fruit.jpg" },
-        { name: "الجزر", emoji: "🥕", link: "carrot.html", img: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Carrot.jpg" },
-        { name: "الخس", emoji: "🥬", link: "lettuce.html", img: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Lettuce_Market.jpg" },
-        { name: "الفلفل", emoji: "🌶️", link: "pepper.html", img: "https://upload.wikimedia.org/wikipedia/commons/0/02/Bell_pepper.jpg" },
-        { name: "الباذنجان", emoji: "🍆", link: "eggplant.html", img: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Aubergine.jpg" },
-        { name: "الكوسة", emoji: "🥒", link: "zucchini.html", img: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Courgette.jpg" },
-        { name: "السبانخ", emoji: "🥗", link: "spinach.html", img: "https://upload.wikimedia.org/wikipedia/commons/5/54/Spinach_leaves.jpg" },
-        { name: "البصل", emoji: "🧅", link: "onion.html", img: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Onion_on_White.JPG" },
-        { name: "الثوم", emoji: "🧄", link: "garlic.html", img: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Garlic.jpg" },
-        { name: "البطاطس", emoji: "🥔", link: "potato.html", img: "https://upload.wikimedia.org/wikipedia/commons/6/60/Patates.jpg" },
-        { name: "البامية", emoji: "🌿", link: "okra.html", img: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Bhindi.jpg" },
-        { name: "الكرنب", emoji: "🥬", link: "cabbage.html", img: "https://upload.wikimedia.org/wikipedia/commons/1/18/Cabbage_and_cross_section_on_white.jpg" },
-        { name: "القرنبيط", emoji: "🥦", link: "cauliflower.html", img: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Cauliflower.JPG" },
-        { name: "البروكلي", emoji: "🥦", link: "broccoli.html", img: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Broccoli_and_cross_section_edit.jpg" },
-        { name: "الشمندر", emoji: "🟥", link: "beetroot.html", img: "https://upload.wikimedia.org/wikipedia/commons/1/11/Beets-Bundle.jpg" },
-        { name: "الجرجير", emoji: "🌿", link: "arugula.html", img: "https://upload.wikimedia.org/wikipedia/commons/2/29/Eruca_sativa_20110528_9787.jpg" },
-        { name: "النعناع", emoji: "🌿", link: "mint.html", img: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Mentha_piperita_2.jpg" },
-        { name: "الفجل", emoji: "🌱", link: "radish.html", img: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Radish.jpg" },
-        { name: "الكراث", emoji: "🧅", link: "leek.html", img: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Leek.jpg" },
-        { name: "اللفت", emoji: "🥔", link: "turnip.html", img: "https://upload.wikimedia.org/wikipedia/commons/5/56/Turnips.jpg" },
-        { name: "القلقاس", emoji: "🌰", link: "taro.html", img: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Taro_corms.jpg" },
-        { name: "السلق", emoji: "🥬", link: "chard.html", img: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Chard.jpg" },
-        { name: "الهليون", emoji: "🌿", link: "asparagus.html", img: "https://upload.wikimedia.org/wikipedia/commons/b/b7/Asparagus_BW_1.jpg" },
-        { name: "القثاء", emoji: "🥒", link: "snake-cucumber.html", img: "https://upload.wikimedia.org/wikipedia/commons/2/23/Armenian_Cucumber.jpg" }
-      ];
+  <main class="max-w-5xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold text-green-700 text-center mb-6">اختر نوع الخضار لمعرفة التفاصيل</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-      document.write(
-        vegetables.map(v => `
-        <a href="${v.link}" class="bg-white rounded-xl shadow hover:shadow-lg transition p-4 text-center">
-          <img src="${v.img}" alt="${v.name}" class="w-full h-40 object-cover rounded-md mb-2">
-          <h2 class="text-lg font-semibold text-green-700">${v.emoji} ${v.name}</h2>
-        </a>
-        `).join('')
-      );
-    </script>
+      <!-- الطماطم -->
+      <a href="tomato.html" class="block bg-red-100 hover:bg-red-200 transition rounded-lg p-4 shadow text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg" alt="الطماطم" class="mx-auto rounded w-32 h-32 object-cover mb-4">
+        <h3 class="text-lg font-semibold text-red-700">🍅 الطماطم</h3>
+      </a>
+
+      <!-- الخيار -->
+      <a href="cucumber.html" class="block bg-green-100 hover:bg-green-200 transition rounded-lg p-4 shadow text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Cucumber_field.jpg" alt="الخيار" class="mx-auto rounded w-32 h-32 object-cover mb-4">
+        <h3 class="text-lg font-semibold text-green-700">🥒 الخيار</h3>
+      </a>
+
+      <!-- الجزر -->
+      <a href="carrot.html" class="block bg-orange-100 hover:bg-orange-200 transition rounded-lg p-4 shadow text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Carrot_field.jpg" alt="الجزر" class="mx-auto rounded w-32 h-32 object-cover mb-4">
+        <h3 class="text-lg font-semibold text-orange-700">🥕 الجزر</h3>
+      </a>
+
+    </div>
   </main>
 
-  <footer class="bg-green-700 text-white p-4 text-center mt-10">
+  <footer class="bg-green-700 text-white text-center p-4 mt-10">
     © 2025 Elbo Greenhouses | قسم الخضروات
   </footer>
 </body>
